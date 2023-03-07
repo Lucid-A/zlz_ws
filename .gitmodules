@@ -1,0 +1,9 @@
+[submodule "src/IR_Camera"]
+	path = src/IR_Camera
+	url = git@github.com:Lucid-A/IR_Camera.git
+[submodule "src/task_allocation"]
+	path = src/task_allocation
+	url = git@github.com:Lucid-A/task_allocation.git
+[submodule "src/apriltag_robot_pose"]
+	path = src/apriltag_robot_pose
+	url = git@github.com:Lucid-A/apriltag_robot_pose.git
