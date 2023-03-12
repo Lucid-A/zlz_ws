@@ -1,0 +1,8 @@
+<launch>
+    <node pkg="map_merge" type="pub_map.py" name="pub_mapi_node" output="screen" />
+    <include file="$(find map_merge)/launch/map_merge.launch" />
+    <include file="$(find mmaster)/launch/master_discovery.launch" />
+    <include file="$(find mmaster)/launch/master_sync.launch" />
+    <include file="$(find rrt_exploration)/launch/simple.launch" />
+    <include file="$(find rrt_exploration)/launch/rrt_rviz.launch" />
+</launch>
