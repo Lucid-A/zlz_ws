@@ -1,5 +1,5 @@
 <launch>
-  <node name="master_sync" pkg="fkie_master_sync" type="master_sync">
+  <node name="master_sync_two" pkg="fkie_master_sync" type="master_sync">
     <!-- Performs resync after the host was offline: unregister and register again to avoid connection losses to python topic. These does not suppot reconnection! -->
     <param name="resync_on_reconnect" value="True" />
     <!-- A configurable period that controls how long the offline-online period [sec] is before the resync kicks in.
@@ -36,7 +36,7 @@
     <rosparam param="ignore_subscribers">[]</rosparam>
 
     <!-- The list of topics to synchronize. The ~ignore_nodes and ~ignore_topics lists are processed first. -->
-    <rosparam param="sync_topics">[]</rosparam>
+    <rosparam param="sync_topics">['/test','/robot1/submap','/robot2/submap','/robot3/submap']</rosparam>
 
     <!-- The list of services, which are to be ignored while a synchroniation. The ~ignore_nodes list is processed first.
     These are defaults and cannot be removed: ['/*get_loggers', '/*set_logger_level'] -->

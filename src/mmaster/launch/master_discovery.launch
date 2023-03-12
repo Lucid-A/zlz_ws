@@ -1,8 +1,8 @@
 <launch>
-  <node name="master_discovery" pkg="fkie_master_discovery" type="master_discovery">
+  <node name="master_discovery_two" pkg="fkie_master_discovery" type="master_discovery">
     <param name="log_level" value="INFO" />
     <!-- Specifies the multicast group. You can bind the to defined interface by adding @address to the group -->
-    <param name="mcast_group" value="226.0.0.0" />
+    <param name="mcast_group" value="224.0.0.1" />
     <param name="mcast_port" value="11511" />
     <!-- Bind the master_discovery to an interface address. If this is not specified the ROS_IP or default interface will be used. -->
     <param name="interface" value="" />
@@ -27,7 +27,7 @@
     <!-- in some network environments does multicast not work properly. In this
       case you can specify robots where a master discovery is running. These
       robots are pinged using unicast communication. -->
-    <rosparam param="robot_hosts">[]</rosparam>
+    <rosparam param="robot_hosts">[board1,board2,board3]</rosparam>
     <!-- After the ROS master was changed the new state will be sent for
       `CHANGE_NOTIFICATION_COUNT` times (Default: 3 sec). The new state will be
       sent with `ROSMASTER_HZ` and only if `HEARTBEAT_HZ` is zero. -->
