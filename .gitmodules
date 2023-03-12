@@ -7,3 +7,6 @@
 [submodule "src/apriltag_robot_pose"]
 	path = src/apriltag_robot_pose
 	url = git@github.com:Lucid-A/apriltag_robot_pose.git
+[submodule "src/rrt_exploration"]
+	path = src/rrt_exploration
+	url = https://gitee.com/bingda-robot/rrt_exploration.git
