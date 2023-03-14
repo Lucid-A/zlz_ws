@@ -1,8 +1,9 @@
 <launch>
-    <node pkg="map_merge" type="pub_map.py" name="pub_mapi_node" output="screen" />
+    <node pkg="map_merge" type="forward_map.py" name="$(anon forward_map_node)" output="screen" />
     <include file="$(find map_merge)/launch/map_merge.launch" />
     <include file="$(find mmaster)/launch/master_discovery.launch" />
     <include file="$(find mmaster)/launch/master_sync.launch" />
     <include file="$(find rrt_exploration)/launch/simple.launch" />
-    <include file="$(find rrt_exploration)/launch/rrt_rviz.launch" />
+    <node pkg="rviz" type="rviz" name="$(anon rviz)" required="true"
+          args="-d $(find rrt_exploration)/simple.rviz"/>
 </launch>
